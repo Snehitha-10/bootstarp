@@ -1,0 +1,44 @@
+<!-- --Exercise-9::Write a JavaScript to demonstrate DOM Elements, events.-- -->
+<!-- Redg.No::21B01A1204 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="demo1">H1 tag</h1>
+  <h1 class="demo">1</h1>
+  <h1 class="demo">2</h1>
+  firstname <input type="text" name="demo2">
+  lastname <input type="text" name="demo3">
+  <p id="demo4"> <br>hello! <br>Welcome to Java Script <br></p>
+
+  <script>
+    console.log(document.getElementById('demo1'));
+    console.log(document.getElementsByClassName("demo"));
+    console.log(document.getElementsByName("demo2"))
+    console.log(document.getElementsByTagName("h1"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelectorAll("h1"));
+    console.log(document.getElementById('demo4').innerHTML);
+    console.log(document.getElementById("demo4").textContent);
+    let n = document.createElement("p");
+    n.innerHTML = "paragraph tag";
+    console.log(n);
+    document.body.appendChild(n);
+    let x = document.getElementById("demo4");
+    let p = x.removeChild(x.firstElementChild)
+    document.write(x.innerHTML)
+    console.log(p)
+
+
+  </script>
+
+</body>
+
+</html>

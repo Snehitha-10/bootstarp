@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b><h2>Conversion of Temperature </h2></b>
+    <p>
+        The conversion of 100 degree celsius to faurenheit:
+    </p>
+<p id="demo"></p>
+
+<p>Multiples of number:</p>
+<p id="demo2">Multiples of 4 upto 10 :</p>
+
+
+<script>
+    function temp(c){
+        f = ((9*c)/5)+32;
+        return f
+    }
+    document.getElementById("demo").innerHTML = "100 degree celsius = "+ temp(100) +" faurenheit";
+    
+    function mul(b,c){
+        let i=1;
+        let a=[];
+        while(a[a.length-1]!= b*c){
+            a.push(b*i);
+            i=i+1;
+        }
+        return a
+    }
+    document.getElementById("demo2").innerHTML = mul(4,10);
+</script>
+</body>
+</html>
+

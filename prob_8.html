@@ -1,0 +1,39 @@
+<!-- --Exercise-8::Write a JavaScript program to demonstrate functions.-- -->
+<!-- Redg.No::21B01A1204 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <p>
+        Passing arguments 1st input as number and 2nd input as no.of.times
+    </p>
+    <p>
+        Here function passes (4,5) as arguments
+    </p>
+    <p>
+        The output is:
+    </p>
+    <p id="test"></p><br>
+    <script>
+        function fun(b, c) {
+            let i = 1;
+            let a = [];
+            while (a[a.length - 1] != b * c) {
+                a.push(b * i);
+                i += 1;
+            }
+            return a.toString();
+        }
+        document.getElementById("test").innerHTML = fun(4,5);
+    </script>
+</body>
+
+</html>

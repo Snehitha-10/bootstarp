@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Java script String operations.</h1>
+   
+
+  <b> <p>The Given string is:</p></b>
+   <p id="demo"></p>
+
+  <b> <p>The length of string is:</p></b>
+   <p id="demo1"></p>
+
+   <b><p>The slice method:</p></b>
+   <p id="demo2"></p>
+
+   <b><p>The replace method:</p></b>
+   
+   <p id="demo3">"Welcome!, to BHIMAVARAM"</p>
+   <button onclick="myReplace()">Try it</button>
+
+   <h2>Java script Array operations.</h2>
+   
+   <b><p>Array to string:</p></b>
+   <p id="demo4"></p>
+
+   <b><p>Pop function:</p></b>
+   <p id="demo5"></p>
+
+   <b><p>Pushfunction:</p></b>
+   <p id="demo6"></p>
+
+   <b><p>slice function:</p></b>
+   <p id="demo7"></p>
+   
+   <b><p>splice function:</p></b>
+   <p id="demo8"></p>
+   
+   <script>
+    let text = "QWERTYUIOPLKGFDSAZXCVBNM";
+    document.getElementById("demo").innerHTML = text;
+
+    document.getElementById("demo1").innerHTML = text.length;
+
+    let fruits="Apple, Banana, Kiwi"
+    document.getElementById("demo2").innerHTML = fruits.slice(7,13);
+
+   
+   function myReplace(){
+
+    let txt=document.getElementById("demo3").innerHTML ;
+    
+    document.getElementById("demo3").innerHTML = txt.replace("BHIMAVARAM","SVECW");
+   }
+
+   let fruit=['Apple','Banana','kiwi','Guava','Mango','Orange'];
+   
+   document.getElementById("demo4").innerHTML = fruit.toString();
+   document.getElementById("demo5").innerHTML = fruit.pop();
+   fruit1= fruit.push("Grapes");
+   document.getElementById("demo6").innerHTML = fruit;
+   fruit2=fruit.slice(1,3);
+   document.getElementById("demo7").innerHTML =fruit2;
+   fruit3 = fruit.splice(0,2,'Add1','Add2');
+   document.getElementById("demo8").innerHTML = fruit;
+  
+
+ 
+
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo1">ElementById</h2>
+    <h1 class="demo">ElementsByClassName-1</h1>
+    <h1 class="demo">ElementsByClassName-2</h1>
+    firstname <input type="text" name="demo2">
+    lastname <input type="text" name="demo3">
+    <p id="demo4"><br>Hello! <br>Welcome to JavaScript <br> </p>
+
+    <script>
+        console.log(document.getElementById("demo1"));
+        console.log(document.getElementsByClassName("demo"));
+        console.log(document.getElementsByName("demo2"));
+        console.log(document.getElementsByTagName("h1"));
+        console.log(document.querySelector("h2"));
+        console.log(document.querySelectorAll("h1"));
+        console.log(document.getElementById("demo4").innerHTML);
+        console.log(document.getElementById("demo4").textContent);
+
+</script>
+
+</body>
+</html>
+

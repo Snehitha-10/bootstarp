@@ -1,0 +1,51 @@
+<!-- --Exercise-5::Demonstrate how pseudo classes can be used to create an effective web page-- -->
+<!-- Redg.No::21B01A1204 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: hotpink;
+        }
+        a:active {
+            color: blue;
+        }
+        img:hover {
+            border: 10px solid red;
+        }
+        h2:first-child {
+
+            color: blue;
+        }
+        input:focus {
+            border: 3px solid lightblue;
+            color: blue;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Styling a link depending on state</h2>
+
+    <p><b><a href="sucess.html">This is a link</a></b></p>
+    <p><b>Note:</b> 'a' tag changes its appearance when you hover it!</p>
+    <div>
+        <h2>It is the first heading in div. It will be indented, and its color will be blue.</h2>
+        <h2>It is the Second heading in div, which will not be affected.</h2>
+    </div>
+    <form>
+        <h1>Name: <input type="text" placeholder="Enter your name"></h1>
+    </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!-- --Exercise : 11::Write JavaScript to validate the following fields of the 
+                      above registration page.
+                        a. Name (Name should contain alphabets and the length 
+                           should not be less than 6 characters).
+                        b. Password (Password should not be less than 6 characters’ length).
+                        c. E-mail id (should not contain any invalid and must 
+                           follow the standardpattern name@domain.com)
+                        d. Phone number (Phone number should contain 10 digits only)-- -->
+<!-- Redg.No::21B01A1204 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+    <script>
+        function validate() {
+            let uname = document.getElementById("username").value;
+            let pword = document.getElementById("password");
+            let check = document.getElementById("checkbox");
+            let r1 = document.getElementById("male").checked;
+            let r2 = document.getElementById("female").checked;
+            let address1 = document.getElementById("address");
+            console.log(r1.value)
+            let g = document.getElementsByName("gender")
+            let e = document.getElementById("email")
+            p = document.getElementById("pnum")
+            let k = document.getElementById("label")
+            if (pword.value == "") {
+                return False
+            }
+            if ((pword.value).length <= 6) {
+                k.style.visibility = "visible"
+                pword.style.border = "2px solid red"
+                return false
+            }
+            if (e.value == "") {
+                alert("enter email")
+                return false
+            }
+            if (p.value == "" | p.length != 10) {
+                alert("invalid phone number")
+                return false
+            }
+            if (r1 == false & r2 == false) {
+                alert("select gender")
+                return false
+            }
+            if (address1.value == "") {
+                alert("enter address")
+            }
+        }   
+    </script>
+</head>
+
+<body>
+    <form action="validation.html" onsubmit="return validate();">
+
+        Name:<input type="text" name="" id="password" required>
+        <label for="" style="color:red ;visibility:hidden" id="label">password must be 8 characters</label>
+        <br><br>
+        E-mail id <input type="email" name="" placeholder="name@domain.com">
+        <br><br>
+        phone number:<input type="number" name="" id="pnum">
+        <br><br>
+        <P>Gender:</P>
+        <input type="radio" name="radio" id="male">Male
+        <input type="radio" name="radio" id="female">female <br><br>
+        <p>Languages:</p>
+        <input type="checkbox" name="" id="">English<br>
+        <input type="checkbox" name="" id="">Telugu<br>
+        <input type="checkbox" name="" id="">Hindi<br>
+        <input type="checkbox" name="" id="">Tamil<br>
+        <textarea name="" id="address" cols="30" rows="10" placeholder="Address:"></textarea><br>
+        <input type="submit" value="submit" >
+    </form>
+
+</body>
+
+</html>
