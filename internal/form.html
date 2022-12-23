@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            let uname=document.getElementById("name").value;
+            let upass=document.getElementById("pword");
+            let uemail=document.getElementById("mail");
+            let ph_no=document.getElementById("phnm");
+            let  r1=document.getElementById("male").checked;
+            let  r2=document.getElementById("female").checked;
+            let  uadd=document.getElementById("address");
+
+           if(uname==""|uname.length <8){
+            alert("Invalid username")
+            return false
+           }
+           if(upass.value==""|upass.value.length <6){
+            alert("Invalid password")
+            return false
+           }
+           if(uemail.value==""){
+            alert("Enter email")
+            return false
+           }
+           if(ph_no.value==""|ph_no.value.length !=10){
+            alert("Invalid phone number")
+            return false
+           }
+           if(r1==false & r2==false){
+            alert("Select Gender")
+            return false
+           }
+           if(uadd.value==""){
+            alert("Enter address")
+            return false
+           }
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="v.html" onsubmit="return validate();">
+
+        NAME: <input type="text" id="name" placeholder="Enter min 8 characters ">
+        <br><br>
+        PASSWORD: <input type="password" id="pword" required>
+        <br><br>
+        EMAIL: <input type="email" name="" id="mail" placeholder="domain@gmail.com">
+        <br><br>
+        PHONE-NO: <input type="number" id="phnm">
+        <br><br>
+        <input type="radio" name="radio" id="male">MALE
+        <input type="radio" name="radio" id="female">FEMALE
+        <br><br>
+        LANGUAGES: <br>
+        <input type="checkbox" name="" id="checkbox">ENGLISH <br>
+        <input type="checkbox" name="" id="checkbox">TELUGU <br>
+        <input type="checkbox" name="" id="checkbox">HINDI <br>
+        <input type="checkbox" name="" id="checkbox">TAMIL
+        <br><br>
+        ADDRESS: <br> <textarea name="" id="addrees" cols="30" rows="10" placeholder="ADDRESS"></textarea>
+        <br><br>
+        <button type="submit" id="submit">SUBMIT</button>
+    
+    </form>
+</body>
+</html>
